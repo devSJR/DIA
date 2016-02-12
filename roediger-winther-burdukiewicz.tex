@@ -38,7 +38,7 @@ processing have been implemented \citep{frery_introduction_2013}. In this
 review, we give a current overview of the R ecosystem about which software 
 packages exist and which deficits they may expose in comparison to other 
 software packages. We aimed to aggregate information about R packages available 
-on CRAN, BioConductor or github.
+on CRAN, Bioconductor \citep{gentleman_bioconductor:_2004} or github.
 
 Analysis of 2D and 3D digital images is a bridge technology which has been used 
 to unravel quantitative and qualitative gene expression data (mRNA and protein 
@@ -143,6 +143,23 @@ Eventually these de
 
 Others include \CRANpkg{dcemri} \citep{dunning_beadarray:_2006, frery_introduction_2013}.
 
+\section{Examples}
+\subsection{Analysis of microbead assays}
+
+
+\begin{example}
+# Detailed installation instructions are available at 
+# http://bioconductor.org/packages/EBImage/
+
+# Install the EBImage from Bioconductor
+source("http://bioconductor.org/biocLite.R")
+biocLite("EBImage")
+
+# Load the EBImage package
+require(EBImage)
+\end{example}
+
+
 \section{GUIs}
 
 There exist also R graphical user interfaces \citep{rodiger_rkward:_2012} which can be used for for image processing. 
@@ -185,9 +202,9 @@ functions.
 
 While evaluation the packages we ended up with experiences regarding the 
 installation and maintenance. Bascially all installation were well instructed. 
-For example, the installation of sophisticated packages like \BIOpkg{EBimage} is 
+For example, the installation of sophisticated packages like \BIOpkg{EBImage} is 
 well documented. However, many packages depend on a number of third-party 
-packages. This applies also to \CRANpkg{EBimage} which requires tiff and 
+packages. This applies also to \CRANpkg{EBImage} which requires tiff and 
 fftwtools.
 
 As described in \citep{rodiger_r_2015}, we recommend to make use of packages for 
@@ -205,7 +222,7 @@ Package & Main function & Comment & Source\\
 \CRANpkg{AnalyzeFMRI} & × & × & ×\\
 \CRANpkg{CRImage} & × & × & ×\\
 \CRANpkg{dcemri} & × & × & ×\\
-\BIOpkg{EBImage} & fancy stuff & well maintained & BioConductor\\
+\BIOpkg{EBImage} & fancy stuff & well maintained & Bioconductor\\
 \CRANpkg{jpeg} & × & × & ×\\
 \CRANpkg{png} & × & × & ×\\
 \CRANpkg{ripa} & × & × & ×\\
