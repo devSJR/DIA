@@ -38,7 +38,7 @@ processing have been implemented \citep{frery_introduction_2013}. In this
 review, we give a current overview of the R ecosystem about which software 
 packages exist and which deficits they may expose in comparison to other 
 software packages. We aimed to aggregate information about R packages available 
-on CRAN, Bioconductor \citep{gentleman_bioconductor:_2004} or github.
+on CRAN, Bioconductor \citep{gentleman_bioconductor:_2004}, RForge or github.
 
 Analysis of 2D and 3D digital images is a bridge technology which has been used 
 to unravel quantitative and qualitative gene expression data (mRNA and protein 
@@ -70,22 +70,22 @@ General image processing and analysis
 Murrel \citep{murrell_raster_2011}
 \CRANpkg{mmand} \citep{clayden_mmand:_2016}
 
-CRAN provides well established packages. These are \CRANpkg{jpeg} 
-\citep{urbanek_jpeg:_2014} and \CRANpkg{png} \citep{urbanek_png:_2013} to 
-read, write and display bitmap JPEG and PNG images, respectively. The 
-development of the \CRANpkg{ripa} \citep{perciano_ripa:_2014} package was started in 2005 by Talita Perciano. 
-This package can be used to processes and analyses RGB, LAN (multispectral) 
-and AVIRIS (hyperspectral) images. Recent advances of \CRANpkg{ripa} make it a promising 
-tool for analysis of large datasets. The vast amount of image data is becoming 
-more and more and essential part of Big Data analysis pipelines. R is among 
-the frequently used for data mining and analysis. It comes to no surprise the 
-commercial and non-commercial entities make heavy use of R \citep{chen_big_2014}. \BIOpkg{EBImage} \citep{pau_ebimager_2010} 
-is presumably the most comprehensive package and the foundation for many other 
-R packages in the context of microscopy-based cellular assays \citep{gowen_near_2015}. This 
-package offers tools to transform (e.g, rotate) the images, segment object 
-(e.g., cells) and extract quantitative descriptors. The early version of 
-\BIOpkg{EBImage} used the Magick++ interface to the ImageMagick image processing 
-library \citep{sklyar_image_2006}.
+CRAN provides well established packages. These are \CRANpkg{jpeg}, \CRANpkg{png} 
+and \CRANpkg{tiff} to read, write and display bitmap JPEG, PNG and TIFF images. 
+The development of the \CRANpkg{ripa} \citep{perciano_ripa:_2014} package was 
+started in 2005 by Talita Perciano. This package can be used to processes and 
+analyses RGB, LAN (multispectral) and AVIRIS (hyperspectral) images. Recent 
+advances of \CRANpkg{ripa} make it a promising tool for analysis of large 
+datasets. The vast amount of image data is becoming more and more and essential 
+part of Big Data analysis pipelines. R is among the frequently used for data 
+mining and analysis. It comes to no surprise the commercial and non-commercial 
+entities make heavy use of R \citep{chen_big_2014}. \BIOpkg{EBImage} 
+\citep{pau_ebimager_2010} is presumably the most comprehensive package and the 
+foundation for many other R packages in the context of microscopy-based cellular 
+assays \citep{gowen_near_2015}. This package offers tools to transform (e.g, 
+rotate) the images, segment object (e.g., cells) and extract quantitative 
+descriptors. The early version of \BIOpkg{EBImage} used the Magick++ interface 
+to the ImageMagick image processing library \citep{sklyar_image_2006}.
 
 \section{General image processing and analysis}
 
@@ -226,10 +226,12 @@ Package & Main function & Comment & Source\\
 \CRANpkg{jpeg} & × & × & ×\\
 \CRANpkg{png} & × & × & ×\\
 \CRANpkg{ripa} & × & × & ×\\
+\CRANpkg{tiff} & × & × & ×\\
+\emph{videoTools} & video and image analysis & - & RForge\\
 \end{tabular}
 \end{center}
 \caption{\label{table:packages}
-R packages.
+R packages. \emph{videoTools}: http://www.rforge.net/videoTools/files/.
 }
 \end{table}
 
