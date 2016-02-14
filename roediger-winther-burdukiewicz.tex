@@ -26,8 +26,8 @@ For testing purposes it is possible to make use of public image repositories as 
 
 
 There are numerous software tools that have been made available for digital 
-image aquisition and processing \citep{wiesmann_review_2015, chieco_image_2013, eliceiri_biological_2012}. 
-The scientific background of the useres is deliberately broad. This includes 
+image acquisition and processing \citep{wiesmann_review_2015, chieco_image_2013, eliceiri_biological_2012}. 
+The scientific background of the users is deliberately broad. This includes 
 biologists, biostatisticians, physicians and others, who fundamentally make use 
 of the similar image analysis techniques. From discussion with peers we learned 
 that knowledge of image processing is gained by self-study. In particular, 
@@ -52,6 +52,8 @@ schierack_species-specific_2014, willitzki_new_2012}.
 We performed two image processing case studies were we applied selected 
 packages for immunoflourescence image analysis and RMI data. 
 
+Pixels and voxels are point samples an a grid pattern.
+
 There are numerous software packages for the analysis of image data 
 \citep{wiesmann_review_2015}. However, R is quite functional when it comes to 
 digital image analysis.
@@ -64,7 +66,15 @@ images of individual cells \citep{bush_using_2012}
 
 \section{Give me a title}
 
-General image processing and analysis
+General image processing and analysis \citep{ljosa_introduction_2009}
+
+An 3D spatial distribution analysis of biomarkers such as 53BP1, phosphorylated 
+ATM, and $\gamma$H2AX  is important for an image-based modeling of dynamic 
+dedistribution of DNA damage into nuclear sub-domains 
+\citep{costes_image-based_2007}. The biomolecules (proteins, RNA, DNA) distribution patterns within are complex. 
+Patterns range from diffuse to punctate or microspeckled 
+\citep{shiels_quantitative_2007, willitzki_new_2012}. However, they all work in a coordinated and controlled 
+manner within the nuleus \citep{shiels_quantitative_2007}
 
 
 \citep{tabelow_modeling_2012, tabelow_dti:_2014}
@@ -89,7 +99,9 @@ rotate) the images, segment object (e.g., cells) and extract quantitative
 descriptors. The early version of \BIOpkg{EBImage} used the Magick++ interface 
 to the ImageMagick image processing library \citep{sklyar_image_2006}.
 
-A recent addition to CRAN is \CRANpkg{imager} \citep{barthelme_imager:_2016}.
+A recent package addition to this field of research is \CRANpkg{imager} \citep{barthelme_imager:_2016}.
+
+
 
 \section{General image processing and analysis}
 
@@ -203,22 +215,32 @@ Many scientist are using R. However, it appears that only few make use of the
 image analysis tools currently available. We would like to raise awareness for 
 the fact that R provides sophisticated packages for digital image analysis. The 
 central advantage is that all analysis is conducted within the same environment 
-accross most  platforms. Added values for the user are that there is less need 
+across most  platforms. Added values for the user are that there is less need 
 to learn a new programming languages and that all analysis can be performed in a 
 consistent and cross-platform environment. Table~\ref{table:packages} gives an 
 overview of R packages currently available. We found that functions from the 
-packages can be easily combinded to conduct manipulations and analysis (e.g., 
-object transformations, measurements, object counting, grey level statisitcs, 
+packages can be easily combined to conduct manipulations and analysis (e.g., 
+object transformations, measurements, object counting, gray level statistics, 
 binarization) at advanced levels. The organization of such functions in 
-coustumized packages is straigthforward even for more complex analysis 
+customized packages is straightforward even for more complex analysis 
 functions.
 
 \citep{rodiger_intestinal_2015} or combined assays of microbeads and cells 
 \citep{scholz_second_2015, grossmann_simultaneous_2016}
 
+Automated image acquisition systems enable microscopy experiments that generate 
+large image datasets. Therefore it is important to have robust, objective and 
+quantitive image analysis systems. Since most image analysis systems are 
+developed for a specific type of experiment, cell type or imaging technology it 
+is challenging to find one tool that fits all needs by manual adaption of all 
+parameters for a specific image analysis task. Pattern recognition is a useful 
+tool in this context. This can be achived by trained algorithms as described by 
+\citet{shamir_pattern_2010}. 
+
 While evaluation the packages we ended up with experiences regarding the 
-installation and maintenance. Bascially all installation were well instructed. 
-For example, the installation of sophisticated packages like \BIOpkg{EBImage} is 
+installation and maintenance. Basically all installation were well instructed. 
+For example, the installation of sophisticated packages like \BIOpkg{EBImage} 
+is 
 well documented. However, many packages depend on a number of third-party 
 packages. This applies also to \CRANpkg{EBImage} which requires tiff and 
 fftwtools. Similar applies to \CRANpkg{imager} which required the installation 
@@ -227,7 +249,7 @@ of fftw3 for computing Fast Fourier Transforms.
 Others and we recommend to make use of packages for reproducible research 
 \citep{rodiger_r_2015}. 
 
-There exist sevel GUI technologies for R which make it possible to integrate 
+There exist several GUI technologies for R which make it possible to integrate 
 R code into an easy to master point-and-click interface.
 
 
@@ -274,7 +296,7 @@ R packages. \emph{videoTools}: http://www.rforge.net/videoTools/files/.
 
 \address{Micha\l{} Burdukiewicz\\
   University of Wroclaw\\
-  Faculty of Biotechnoloy\\
+  Faculty of Biotechnology\\
   Department of Genomics\\
   Wroclaw\\
   Poland}
