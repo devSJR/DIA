@@ -8,8 +8,7 @@
 \abstract{
 Management, display, and processing of biological and medical imaging data is 
 an important task in life sciences and medical research. R is a powerful 
-cross-platform, which can handle most task statistical computing tasks in 
-the same environment. The aim of this mini-review is to give a brief overview 
+cross-platform statistical computing environment. The aim of this mini-review is to give a brief overview 
 about image processing software for the R statistical computing environment. 
 When it comes to image analysis, R may appear to provide only few tools on the 
 first sight. However, a systematic analysis of the existing packages shows 
@@ -23,8 +22,11 @@ shows that a huge potential for numerous applications.
 \item Where is it used?
 \end{itemize}
 
+For testing purposes it is possible to make use of public image repositories as listed by \citet{eliceiri_biological_2012}
+
+
 There are numerous software tools that have been made available for digital 
-image aquisition and processing \citep{wiesmann_review_2015, chieco_image_2013}. 
+image aquisition and processing \citep{wiesmann_review_2015, chieco_image_2013, eliceiri_biological_2012}. 
 The scientific background of the useres is deliberately broad. This includes 
 biologists, biostatisticians, physicians and others, who fundamentally make use 
 of the similar image analysis techniques. From discussion with peers we learned 
@@ -87,6 +89,8 @@ rotate) the images, segment object (e.g., cells) and extract quantitative
 descriptors. The early version of \BIOpkg{EBImage} used the Magick++ interface 
 to the ImageMagick image processing library \citep{sklyar_image_2006}.
 
+A recent addition to CRAN is \CRANpkg{imager} \citep{barthelme_imager:_2016}.
+
 \section{General image processing and analysis}
 
 This section may contain a figure such as Figure~\ref{figure:bead}.
@@ -94,7 +98,7 @@ This section may contain a figure such as Figure~\ref{figure:bead}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[clip=true,trim=0.1cm 0.3cm 0.2cm 0.1cm, width=12cm]{bead}
-  \caption{The logo of R.}
+  \caption{Image of beads.}
   \label{figure:bead}
 \end{figure}
 
@@ -120,22 +124,17 @@ patterns and intensity levels (FIGURES OF CELLS), the presence of mitotic
 cells and  artifacts. The later may be caused by uneven illumination and 
 photo-bleaching effects \citep{tonti_automated_2015}.
 
-Intensity inhomogeneity (bias field) is a common artefact in 
-magnetic resonance (MR) images, which hinders successful automatic segmentation. \citep{ivanovska_efficient_2016}
-
-
-\begin{example}
-  x <- 1:10
-  result <- myFunction(x)
-\end{example}
-
+Intensity inhomogeneity (bias field) is a common artefact in magnetic resonance 
+(MR) images, which hinders successful automatic segmentation. \citep{ivanovska_efficient_2016}
 
 \section{Applications}
 
 \section{Examples}
 \subsection{Statistical analysis of functional magnetic resonance imaging data}
 
-Statistical analysis of functional magnetic resonance imaging (fMRI) data  is a non-invasive neuroimaging technique.
+Statistical analysis of functional magnetic resonance imaging (fMRI) data  is a 
+non-invasive neuroimaging technique. R has a impressive number of packages for 
+such analysis \citep{tabelow_special_2011}.
 
 largely used in clinical routine and advanced brain research
 
@@ -144,13 +143,16 @@ largely used in clinical routine and advanced brain research
 Resonance Imaging (MRI) and functional Magnetic Resonance Imaging (fMRI) data, 
 respectively.
 
-Eventually these de 
+\CRANpkg{PET} \citep{philipsen_pet:_2010}
 
 Others include \CRANpkg{dcemriS4} \citep{dunning_beadarray:_2006, frery_introduction_2013}.
 
 \subsection{Analysis of fluorescence image data}
 
 \CRANpkg{CRImage} package \citep{failmezger_crimage:_2012} for tumor image analysis
+
+
+gitter, for quantification of colony sizes from plate images \citep{wagih_gitter:_2014}
 
 
 \subsection{Analysis of microbead assays}
@@ -205,20 +207,22 @@ accross most  platforms. Added values for the user are that there is less need
 to learn a new programming languages and that all analysis can be performed in a 
 consistent and cross-platform environment. Table~\ref{table:packages} gives an 
 overview of R packages currently available. We found that functions from the 
-packages can be easily combinded to conduct manipulations and analysis (object 
-transformations, measurements, object counting, grey level statisitcs, 
-binarization, etc) at advanced levels. The organization of such functions in 
+packages can be easily combinded to conduct manipulations and analysis (e.g., 
+object transformations, measurements, object counting, grey level statisitcs, 
+binarization) at advanced levels. The organization of such functions in 
 coustumized packages is straigthforward even for more complex analysis 
 functions.
 
-\citep{rodiger_intestinal_2015} or combined assays of microbeads and cells \citep{scholz_second_2015, grossmann_simultaneous_2016}
+\citep{rodiger_intestinal_2015} or combined assays of microbeads and cells 
+\citep{scholz_second_2015, grossmann_simultaneous_2016}
 
 While evaluation the packages we ended up with experiences regarding the 
 installation and maintenance. Bascially all installation were well instructed. 
 For example, the installation of sophisticated packages like \BIOpkg{EBImage} is 
 well documented. However, many packages depend on a number of third-party 
 packages. This applies also to \CRANpkg{EBImage} which requires tiff and 
-fftwtools.
+fftwtools. Similar applies to \CRANpkg{imager} which required the installation 
+of fftw3 for computing Fast Fourier Transforms.
 
 Others and we recommend to make use of packages for reproducible research 
 \citep{rodiger_r_2015}. 
@@ -236,7 +240,10 @@ Package & Main function & Comment & Source\\
 \CRANpkg{CRImage} & × & × & Bioconductor\\
 \CRANpkg{dcemriS4} & × & × & CRAN\\
 \BIOpkg{EBImage} & fancy stuff & well maintained & Bioconductor\\
+\CRANpkg{gitter} & × & based on EBImage & CRAN\\
+\CRANpkg{imager} & × & × & CRAN\\
 \CRANpkg{jpeg} & × & × & CRAN\\
+\CRANpkg{PET} & × & × & CRAN\\
 \CRANpkg{png} & × & × & CRAN\\
 \CRANpkg{ripa} & × & × & ×\\
 \CRANpkg{tiff} & × & × & CRAN\\
