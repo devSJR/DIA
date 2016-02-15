@@ -34,8 +34,8 @@ images were analyzed in relation to cell structures, tissues and organs
 \citep{chieco_image_2013, rodiger_highly_2013, schierack_species-specific_2014, 
 willitzki_new_2012}. Other applications include fluorescence-lifetime 
 measurements of cellular interactions (e.g., cell adhesion) 
-\citep{eliceiri_biological_2012, schierack_species-specific_2014}. Digital image 
-analysis (DIA) is a complex process. It involves (1) instrument control, (2) 
+\citep{eliceiri_biological_2012, schierack_species-specific_2014}. Computational digital image 
+analysis (CDIA) is a complex process. It involves (1) instrument control, (2) 
 data import and export, (3) data connectors, (4) data storage, (5) algorithms 
 for image processing and analysis, (6) machine-learning, (7) statistical 
 analysis and (8) report generation \citep{eliceiri_biological_2012}. There are 
@@ -46,31 +46,23 @@ deliberately broad. This includes biologists, biostatisticians, physicians and
 others, who fundamentally make use of the similar image analysis techniques. 
 From discussion with peers we learned that knowledge of image processing is 
 gained by self-study. In particular, learning of several programming languages 
-may hamper the scientist to focus on their scientific aim. R \citep{R} is 
-\textit{de facto} the \textit{lingua franca} of statistical bioinformatics and 
-therefore used in numerous research disciplines \citep{rodiger_r_2015}. It is a 
-powerful tool for statistical data analysis. It comes to no surprise that 
-software packages for digital image processing have been implemented 
-\citep{frery_introduction_2013}. In this review, we give an overview of the R 
-ecosystem about which software packages exist and which deficits they may expose 
-in comparison to other software packages. We aimed to aggregate information 
-about R packages available on CRAN, Bioconductor 
-\citep{gentleman_bioconductor:_2004}, RForge or github.
+may hamper the scientist to focus on their scientific aim.
 
-
-We performed two image processing case studies were we applied selected 
-packages for immunoflourescence image analysis and RMI data. 
+R \citep{R} is \textit{de facto} the \textit{lingua franca} of statistical 
+bioinformatics and therefore used in numerous research disciplines 
+\citep{rodiger_r_2015}. It is a powerful tool for statistical data analysis. It 
+comes to no surprise that software packages for digital image processing have 
+been implemented \citep{frery_introduction_2013}. There are numerous software 
+packages for the analysis of image data \citep{wiesmann_review_2015}. However, R 
+is quite functional when it comes to digital image analysis. In this review, we 
+give an overview of the R ecosystem about which software packages exist and 
+which deficits they may expose in comparison to other software packages. We 
+aimed to aggregate information about R packages available on CRAN, Bioconductor 
+\citep{gentleman_bioconductor:_2004}, RForge or github. We performed two image 
+processing case studies were we applied selected packages for (A) 
+immunoflourescence image analysis and (B) RMI data. 
 
 Pixels and voxels are point samples an a grid pattern.
-
-There are numerous software packages for the analysis of image data 
-\citep{wiesmann_review_2015}. However, R is quite functional when it comes to 
-digital image analysis.
-
-image processing capabilities of Cell-ID and data analysis by the statistical 
-programming framework R for quantifying various cellular features (e.g., volume, 
-total and subcellular fluorescence localization) from sets of microscope 
-images of individual cells \citep{bush_using_2012}
 
 
 \section{Give me a title}
@@ -85,6 +77,10 @@ Patterns range from diffuse to punctate or microspeckled
 \citep{shiels_quantitative_2007, willitzki_new_2012}. However, they all work in a coordinated and controlled 
 manner within the nuleus \citep{shiels_quantitative_2007}
 
+image processing capabilities of Cell-ID and data analysis by the statistical 
+programming framework R for quantifying various cellular features (e.g., volume, 
+total and subcellular fluorescence localization) from sets of microscope 
+images of individual cells \citep{bush_using_2012}
 
 \citep{tabelow_modeling_2012, tabelow_dti:_2014}
 
@@ -194,6 +190,17 @@ require(EBImage)
 
 \end{example}
 
+\subsection{Machine Learning}
+CDIA can be used to classify cells in microscopy images automatically by machine 
+learning for image-based screening. \citet{sommer_machine_2013} reviewed how 
+images can be converted into a data representation for machine learning (ML). ML 
+functionality is present in open source packages such as CellProfiler 
+\citep{conrad_micropilot:_2011, sommer_machine_2013}. CDIA R packages do not 
+come with functionality. However, the R programming language has tools for 
+signal processing, statistical modeling, machine learning and data visualization 
+\citep{pau_ebimager_2010}.
+
+\texttt{example for ML and CDIA?}
 
 \section{Graphical User Interface for Digital Image Analysis}
 
@@ -276,6 +283,7 @@ Package & Main function & Comment & Source\\
 \CRANpkg{dcemriS4} & × & × & CRAN\\
 \BIOpkg{EBImage} & fancy stuff & well maintained & Bioconductor\\
 \CRANpkg{gitter} & × & based on EBImage & CRAN\\
+\BIOpkg{imageHTS} & fancy stuff & - d & Bioconductor\\
 \CRANpkg{imager} & × & × & CRAN\\
 \CRANpkg{jpeg} & × & × & CRAN\\
 \CRANpkg{PET} & × & × & CRAN\\
