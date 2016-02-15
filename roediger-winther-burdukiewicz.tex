@@ -22,32 +22,41 @@ shows that a huge potential for numerous applications.
 \item Where is it used?
 \end{itemize}
 
-For testing purposes it is possible to make use of public image repositories as listed by \citet{eliceiri_biological_2012}
+Scientists are using vast amount of images for qualitative data analysis. They 
+originate from from technologies (e.g., fluorescence microscopy, microarrays) 
+used for screening of multiple specimens of time or z-series data. For example, 
+fluorescence microscopy data can be used to quantify the localization, 
+localization and structure of a cell components dependent on time. Analysis of 
+2D and 3D digital images is a bridge technology which has been used to unravel 
+quantitative and qualitative gene expression data (mRNA and protein level), 
+cellular interactions and diagnostic data. In particular, immunoflourescence 
+images were analyzed in relation to cell structures, tissues and organs 
+\citep{chieco_image_2013, rodiger_highly_2013, schierack_species-specific_2014, 
+willitzki_new_2012}. Other applications include fluorescence-lifetime 
+measurements of cellular interactions (e.g., cell adhesion) 
+\citep{eliceiri_biological_2012, schierack_species-specific_2014}. Digital image 
+analysis (DIA) is a complex process. It involves (1) instrument control, (2) 
+data import and export, (3) data connectors, (4) data storage, (5) algorithms 
+for image processing and analysis, (6) machine-learning, (7) statistical 
+analysis and (8) report generation \citep{eliceiri_biological_2012}. There are 
+numerous software tools that have been made available for digital image 
+acquisition and processing \citep{wiesmann_review_2015, chieco_image_2013, 
+eliceiri_biological_2012}. The scientific background of the users is 
+deliberately broad. This includes biologists, biostatisticians, physicians and 
+others, who fundamentally make use of the similar image analysis techniques. 
+From discussion with peers we learned that knowledge of image processing is 
+gained by self-study. In particular, learning of several programming languages 
+may hamper the scientist to focus on their scientific aim. R \citep{R} is 
+\textit{de facto} the \textit{lingua franca} of statistical bioinformatics and 
+therefore used in numerous research disciplines \citep{rodiger_r_2015}. It is a 
+powerful tool for statistical data analysis. It comes to no surprise that 
+software packages for digital image processing have been implemented 
+\citep{frery_introduction_2013}. In this review, we give an overview of the R 
+ecosystem about which software packages exist and which deficits they may expose 
+in comparison to other software packages. We aimed to aggregate information 
+about R packages available on CRAN, Bioconductor 
+\citep{gentleman_bioconductor:_2004}, RForge or github.
 
-
-There are numerous software tools that have been made available for digital 
-image acquisition and processing \citep{wiesmann_review_2015, chieco_image_2013, eliceiri_biological_2012}. 
-The scientific background of the users is deliberately broad. This includes 
-biologists, biostatisticians, physicians and others, who fundamentally make use 
-of the similar image analysis techniques. From discussion with peers we learned 
-that knowledge of image processing is gained by self-study. In particular, 
-learning of several programming languages may hamper the scientist to focus on 
-their scientific aim. R \citep{R} is \textit{de facto} the \textit{lingua 
-franca} of statistical bioinformatics and therefore used in numerous research 
-disciplines \citep{rodiger_r_2015}. It is a powerful tool for statistical data 
-analysis. It comes to no surprise that software packages for digital image 
-processing have been implemented \citep{frery_introduction_2013}. In this 
-review, we give a current overview of the R ecosystem about which software 
-packages exist and which deficits they may expose in comparison to other 
-software packages. We aimed to aggregate information about R packages available 
-on CRAN, Bioconductor \citep{gentleman_bioconductor:_2004}, RForge or github.
-
-Analysis of 2D and 3D digital images is a bridge technology which has been used 
-to unravel quantitative and qualitative gene expression data (mRNA and protein 
-level), cellular interactions and diagnostic data. In particular, 
-immunoflourescence images were analyzed in relation to cell structures, tissues 
-and organs \citep{chieco_image_2013, rodiger_highly_2013, 
-schierack_species-specific_2014, willitzki_new_2012}.
 
 We performed two image processing case studies were we applied selected 
 packages for immunoflourescence image analysis and RMI data. 
@@ -211,22 +220,26 @@ and GPU and CPU usage ...
 
 \section{Summary}
 
-Many scientist are using R. However, it appears that only few make use of the 
-image analysis tools currently available. We would like to raise awareness for 
-the fact that R provides sophisticated packages for digital image analysis. The 
-central advantage is that all analysis is conducted within the same environment 
-across most  platforms. Added values for the user are that there is less need 
-to learn a new programming languages and that all analysis can be performed in a 
-consistent and cross-platform environment. Table~\ref{table:packages} gives an 
-overview of R packages currently available. We found that functions from the 
-packages can be easily combined to conduct manipulations and analysis (e.g., 
-object transformations, measurements, object counting, gray level statistics, 
-binarization) at advanced levels. The organization of such functions in 
-customized packages is straightforward even for more complex analysis 
-functions.
+Image analysis within one software framework can help ensure that results are 
+accurate, objective and reproducible. Many scientist are using R. However, it 
+appears that only few make use of the image analysis tools currently available. 
+We would like to raise awareness for the fact that R provides sophisticated 
+packages for digital image analysis. The central advantage is that all analysis 
+is conducted within the same environment across most  platforms. Added values 
+for the user are that there is less need to learn a new programming languages 
+and that all analysis can be performed in a consistent and cross-platform 
+environment. Table~\ref{table:packages} gives an overview of R packages 
+currently available. We found that functions from the packages can be easily 
+combined to conduct manipulations and analysis (e.g., object transformations, 
+measurements, object counting, gray level statistics, binarization) at advanced 
+levels. The organization of such functions in customized packages is 
+straightforward even for more complex analysis functions.
 
 \citep{rodiger_intestinal_2015} or combined assays of microbeads and cells 
 \citep{scholz_second_2015, grossmann_simultaneous_2016}
+
+For testing purposes it is possible to make use of public image repositories as 
+listed by \citet{eliceiri_biological_2012}.
 
 Automated image acquisition systems enable microscopy experiments that generate 
 large image datasets. Therefore it is important to have robust, objective and 
