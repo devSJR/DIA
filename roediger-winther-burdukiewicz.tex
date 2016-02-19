@@ -19,7 +19,7 @@ shows that a huge potential for numerous applications.
 
 \begin{itemize}
 \item Digital image processing?
-\item Where is it used?
+\item Where is it used? dffd
 \end{itemize}
 
 Scientists are using vast amount of images for qualitative data analysis. They 
@@ -33,20 +33,23 @@ cellular interactions and diagnostic data. In particular, immunoflourescence
 images were analyzed in relation to cell structures, tissues and organs 
 \citep{chieco_image_2013, rodiger_highly_2013, schierack_species-specific_2014, 
 willitzki_new_2012}. Other applications include fluorescence-lifetime 
-measurements of cellular interactions (e.g., cell adhesion) 
-\citep{eliceiri_biological_2012, schierack_species-specific_2014}. Computational 
-digital image analysis (CDIA) is a complex process. It involves (1) instrument 
-control, (2) data import and export, (3) data connectors, (4) data storage, (5) 
-algorithms for image processing and analysis, (6) machine-learning, (7) 
-statistical analysis and (8) report generation \citep{eliceiri_biological_2012}. 
-There are numerous software tools that have been made available for digital 
-image acquisition and processing \citep{chieco_image_2013, 
-eliceiri_biological_2012, wiesmann_review_2015}. The scientific background of 
-the users is deliberately broad. This includes biologists, biostatisticians, 
-physicians and others, who fundamentally make use of the similar image analysis 
-techniques. From discussion with peers we learned that knowledge of image 
-processing is gained by self-study. In particular, learning of several 
-programming languages may hamper the scientist to focus on their scientific aim.
+measurements of cellular interactions (e.g., cell adhesion), Raman-imaging and more
+\citep{eliceiri_biological_2012, schierack_species-specific_2014, vogler_separation_2010}. Computational 
+digital image analysis (CDIA) is a complex processcan which can yield objective 
+and quantitative measurements. It involves (1) instrument control, (2) data 
+import and export, (3) data connectors, (4) data storage, (5) algorithms for 
+image processing and analysis, (6) machine-learning, (7) statistical analysis 
+and (8) report generation \citep{eliceiri_biological_2012}. There are numerous 
+software tools that have been made available for digital image acquisition and 
+processing. It was shown that CDIA subtle differences within image specimens of 
+multiple cellular phenotypes or cell cycle phases \citep{chieco_image_2013, 
+eliceiri_biological_2012, ljosa_introduction_2009, wiesmann_review_2015}. The 
+scientific background of the users is deliberately broad. This includes 
+biologists, biostatisticians, physicians and others, who fundamentally make use 
+of the similar image analysis techniques. From discussion with peers we learned 
+that knowledge of image processing is gained by self-study. In particular, 
+learning of several programming languages may hamper the scientist to focus on 
+their scientific aim.
 
 R \citep{R} is \textit{de facto} the \textit{lingua franca} of statistical 
 bioinformatics and therefore used in numerous research disciplines 
@@ -89,7 +92,7 @@ Murrel \citep{murrell_raster_2011}
 
 CRAN provides well established packages. These are \CRANpkg{jpeg}, \CRANpkg{png} 
 and \CRANpkg{tiff} to read, write and display bitmap JPEG, PNG and TIFF images. 
-The development of the \CRANpkg{ripa} \citep{perciano_ripa:_2014} package was 
+The development of the \CRANpkg{ripa} \citep{frery_introduction_2013, perciano_ripa:_2014} package was 
 started in 2005 by Talita Perciano. This package can be used to processes and 
 analyses RGB, LAN (multispectral) and AVIRIS (hyperspectral) images. Recent 
 advances of \CRANpkg{ripa} make it a promising tool for analysis of large 
@@ -224,6 +227,28 @@ microscopes, MRI scanner) produce nowadays. Preferably, affordable personal desk
 computers should be usable. R has several disadvantages when it comes to memory management
 and GPU and CPU usage ...
 
+\section{Orphaned R packages}
+
+In the past there have been of R packages developed which are no longer 
+maintained. 
+\CRANpkg{rimage}\footnote{https://cran.r-project.org/src/contrib/Archive/rimage/ 
+} provided functions for image processing, such as sobel filter, rank filters, 
+fft and histogram equalization. 
+\CRANpkg{edci}\footnote{https://cran.r-project.org/src/contrib/Archive/edci/} 
+offered edge detection based on the difference of two asymmetric M kernel 
+estimators and regression clustering (linear, circular) based on redescending M 
+estimators. 
+\CRANpkg{epsi}\footnote{https://cran.r-project.org/src/contrib/Archive/epsi/} 
+offered edge and corner preserving smoothing methods for images which are based 
+on a redescending M kernel estimator. 
+\CRANpkg{biOps}\footnote{https://cran.r-project.org/src/contrib/Archive/biOps/} 
+included functions for geometric, arithmetic, logic, morphologic operations, 
+look-up tables, edge detection (e.g., Roberts, Sobel, Kirsch, Marr-Hildreth and 
+Canny), convolution masks operations, fft, Isodata and k-means classification methods 
+(standard, kd-tree, brute force methods). \CRANpkg{RImageJ}\footnote{ 
+https://cran.r-project.org/src/contrib/Archive/RImageJ/} offered R bindings for 
+ImageJ.
+
 \section{Summary}
 
 Image analysis within one software framework can help ensure that results are 
@@ -280,20 +305,26 @@ Package & Main function & Comment & Source\\
 \CRANpkg{AnalyzeFMRI} & × & × & ×\\
 \CRANpkg{CRImage} & × & × & Bioconductor\\
 \CRANpkg{dcemriS4} & × & × & CRAN\\
+\CRANpkg{dpmixsim} & × & × & CRAN\\
 \BIOpkg{EBImage} & fancy stuff & well maintained & Bioconductor\\
 \CRANpkg{gitter} & × & based on EBImage & CRAN\\
 \BIOpkg{imageHTS} & fancy stuff & - d & Bioconductor\\
 \CRANpkg{imager} & × & × & CRAN\\
 \CRANpkg{jpeg} & × & × & CRAN\\
 \CRANpkg{PET} & × & × & CRAN\\
+\CRANpkg{pixmap} & × & × & CRAN\\
 \CRANpkg{png} & × & × & CRAN\\
 \CRANpkg{ripa} & × & × & ×\\
+\CRANpkg{RNiftyReg} & × & × & CRAN\\
 \CRANpkg{tiff} & × & × & CRAN\\
+\CRANpkg{rtiff} & reads and writes TIFF format images & × & CRAN\\
 \emph{videoTools} & video and image analysis & - & RForge\\
 \end{tabular}
 \end{center}
 \caption{\label{table:packages}
-R packages. \emph{videoTools}: http://www.rforge.net/videoTools/files/.
+R packages. \emph{videoTools}: http://www.rforge.net/videoTools/files/. 
+\CRANpkg{pixmap} can read and write bitmap images in PBM (black/white), PGM 
+(grey) and PPM (color) format.
 }
 \end{table}
 
