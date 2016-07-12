@@ -207,10 +207,22 @@ images can be converted into a data representation for machine learning (ML). ML
 functionality is present in open source packages such as CellProfiler 
 \citep{conrad_micropilot:_2011, sommer_machine_2013}. CDIA R packages do not 
 come with functionality. However, the R programming language has tools for 
-signal processing, statistical modeling, machine learning and data visualization 
-\citep{abbas_comparative_2014, fuchs_clustering_2010, pau_ebimager_2010}
+signal processing, statistical modeling, machine learning, regression, 
+classification, variable selection and data visualization 
+\citep{abbas_comparative_2014, fuchs_clustering_2010, pau_ebimager_2010, 
+genuer-poggi-tuleaumalot:2015}.
 
 \texttt{example for ML and CDIA?}
+
+Clustering is a well established and widely-used technique used in machine 
+learning, data mining, character recognition and information retrieval. The aim 
+is to group similar objects and separate dis-similar objects based on selected 
+features \citep{szkaliczki_clustering._2016, hu_progenyclust:_2016}.  Commonly 
+used algorithms, such as k-means or hierarchical clustering, require a priory 
+specified cluster numbers which is often not known. Therefore clustering 
+evaluation techniques were proposed. For example, Progeny Clustering can be used 
+to estimate the optimal number for clustering to find the cell clusters based on 
+their imaging data \citep{hu_progenyclust:_2016}.
 
 Expert rating of images is commonly used in several stages. For example, if new 
 patterens need to be classified or in cases where ambigous patterns need a 
@@ -221,6 +233,14 @@ recently described the R package \CRANpkg{MTurkR} for the Amazon Mechanical Turk
 immediate use in R. In his example he used crowdsourced human intelligence for 
 preprocessing massive ``messy'' data into a structued form. The image rating 
 task involved 225 crowdsourced workers and more than 5500 images.
+
+Conventioanl classification algorithms operate with datasets which have a set 
+of independent variables (predictor), and only one variable to be predicted. 
+However, for many biomedical image data sets classifier has to work with 
+several outputs. The classification of picture can have a set of labels. For 
+example, pictures can be assigned landscape, sky and forest. \CRANpkg{mldr} 
+package \citep{charte_working_2015} was developed for exploratory analysis, 
+transformation and manipulation of multilabel datasets.
 
 \section{Graphical User Interface for Digital Image Analysis}
 
