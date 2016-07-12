@@ -141,7 +141,7 @@ cell patterns and array technologies like microarrays and bead-based assays
 \citep{dunning_beadarray:_2006, rodiger_highly_2013, willitzki_new_2012, willitzki_fully_2013}.
 Several software packages have been developed. imageJ belongs to the most 
 used and cited tools. When it comes to R numerous packages exist, which can 
-be readily integrated in the analysis routines \citep{frery_introduction_2013}.
+be readily integrated in the analysis routines \citep{schultze_illuminagui_2007, frery_introduction_2013}.
 
 The accuracy of image segmentation is a critical step in a computer-aided 
 diagnosis systems. The recognition of mitotic cells and the classification of 
@@ -200,7 +200,7 @@ require(EBImage)
 
 \end{example}
 
-\subsection{Machine Learning}
+\subsection{Machine Learning and Crowdsourced Data Preprocessing}
 CDIA can be used to classify cells in microscopy images automatically by machine 
 learning for image-based screening. \citet{sommer_machine_2013} reviewed how 
 images can be converted into a data representation for machine learning (ML). ML 
@@ -211,6 +211,16 @@ signal processing, statistical modeling, machine learning and data visualization
 \citep{abbas_comparative_2014, fuchs_clustering_2010, pau_ebimager_2010}
 
 \texttt{example for ML and CDIA?}
+
+Expert rating of images is commonly used in several stages. For example, if new 
+patterens need to be classified or in cases where ambigous patterns need a 
+consensus of the expert opinion. Biomedial research vast amouts of image data 
+expose the scientists to a high workload. \citet{leeper_crowdsourced_2016} 
+recently described the R package \CRANpkg{MTurkR} for the Amazon Mechanical Turk 
+(MTurk) crowdsourcing platform, which is focused on preprocessing of data for 
+immediate use in R. In his example he used crowdsourced human intelligence for 
+preprocessing massive ``messy'' data into a structued form. The image rating 
+task involved 225 crowdsourced workers and more than 5500 images.
 
 \section{Graphical User Interface for Digital Image Analysis}
 
@@ -255,7 +265,7 @@ look-up tables, edge detection (e.g., Roberts, Sobel, Kirsch, Marr-Hildreth and
 Canny), convolution masks operations, fft, Isodata and k-means classification methods 
 (standard, kd-tree, brute force methods). \CRANpkg{RImageJ}\footnote{ 
 https://cran.r-project.org/src/contrib/Archive/RImageJ/} offered R bindings for 
-ImageJ.
+ImageJ through \CRANpkg{rJava} to read and processes various iamge formats.
 
 \section{Summary}
 
